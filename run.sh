@@ -6,12 +6,13 @@
 #SBATCH --gres=gpu:2  
   
 # Load any necessary modules or activate your environment  
+source /etc/profile.d/modules.sh
 module load cuda ninja
 echo $CUDA_HOME
 source venv/bin/activate
 
-MODEL_DIR="$SLURM_TMPDIR/model"
-CACHE_DIR="$SLURM_TMPDIR/cache"
+MODEL_DIR="${SLURM_TMPDIR:-$PWD/tmp}/model"
+CACHE_DIR="${SLURM_TMPDIR:-$PWD/tmp}/cache"
 mkdir -p "$MODEL_DIR" "$CACHE_DIR"
   
 # Run the estimate_hardness command  
