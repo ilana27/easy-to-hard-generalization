@@ -1,6 +1,6 @@
 #!/bin/bash  
 #SBATCH -J=estimate_hardness  
-#SBATCH -o slurm_output/out/Hardness-%j.out #SBATCH -e slurm_output/error/Hardness-%j.out 
+#SBATCH -o slurm_output/out/Hardness-%j.out #SBATCH -e slurm_output/err/Hardness-%j.out 
 #SBATCH --time=24:00:00
 #SBATCH --partition=gpus
 #SBATCH --gres=gpu:2  
