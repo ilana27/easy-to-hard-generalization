@@ -4,7 +4,7 @@
 #SBATCH -e slurm_output/err/Hardness-%j.out 
 #SBATCH --time=24:00:00
 #SBATCH --partition=gpus
-#SBATCH --gres=gpu:2  
+#SBATCH --gres=gpu:1  
   
 # Load any necessary modules or activate your environment  
 module load cuda
