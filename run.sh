@@ -7,7 +7,11 @@
 #SBATCH --gres=gpu:1  
   
 # Load any necessary modules or activate your environment  
-module load cuda
+# module load cuda
+export CUDA_HOME=/local/projects/cuda12/cuda12.2.2
+export PATH=$CUDA_HOME/bin:$PATH
+export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
+
 echo $CUDA_HOME
 source venv/bin/activate
 
