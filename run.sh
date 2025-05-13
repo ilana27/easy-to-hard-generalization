@@ -13,7 +13,7 @@ export PATH=$CUDA_HOME/bin:$PATH
 export LD_LIBRARY_PATH=$CUDA_HOME/lib64:$LD_LIBRARY_PATH
 
 echo $CUDA_HOME
-source venv/bin/activate
+source env/bin/activate
 
 MODEL_DIR="${SLURM_TMPDIR:-$PWD/tmp}/model"
 CACHE_DIR="${SLURM_TMPDIR:-$PWD/tmp}/cache"
