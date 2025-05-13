@@ -3,7 +3,7 @@
 #SBATCH -o slurm_output/out/Hardness-%j.out 
 #SBATCH -e slurm_output/err/Hardness-%j.out 
 #SBATCH --time=24:00:00
-#SBATCH --partition=gpus
+#SBATCH --partition=gpu
 #SBATCH --gres=gpu:1  
   
 # Load any necessary modules or activate your environment  
